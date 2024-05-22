@@ -179,6 +179,7 @@ outlines:
           shift: [-0.5px, -0.5py]
         - ref: thumbs_inner_cluster
           shift: [-0.5px, -0.75py]
+          #shift: [-1px, -0.585py]
         - ref: thumbs_outer_cluster
           shift: [-0.52px, -0.5py]
         - ref: thumbs_outer_cluster
@@ -352,6 +353,27 @@ outlines:
       where: matrix_inner_bottom
       adjust:
         shift: [px+5,0.35py]
+  _mcucutout_edge: 
+    - what: polygon
+      #where: matrix_inner_bottom
+      #adjust:
+      #  shift: [px+5,0.35py]
+      operation: stack
+      points:
+        - ref: thumbs_outer_cluster
+          shift: [0.72px, 0.5py]
+        - ref: thumbs_outer_cluster
+          shift: [0.945px, -0.0py]
+        - ref: thumbs_outer_cluster
+          shift: [1px, -0.125py]
+        - ref: thumbs_outer_cluster
+          shift: [0.54px, -0.5py]
+
+        - ref: thumbs_outer_cluster
+          shift: [1.1px, -0.2py]
+        - ref: thumbs_outer_cluster
+          shift: [1.1px, -0.05py]
+      fillet: 1
 
   _usbcutout:
     - what: rectangle
@@ -393,6 +415,7 @@ outlines:
           -cutout_circle_right,
           #-cutout_circle_small,
           -_mcucutout,
+          -_mcucutout_edge,
           -switches
   ]
 
@@ -511,22 +534,27 @@ pcbs:
         what: mountinghole
         where: matrix_pinky_top
         adjust: 
-          shift: [0.5px,-0.5py]
+          shift: [0.5875px,-0.25py]
       holeBottomLeft:
         what: mountinghole
         where: matrix_pinky_bottom
         adjust: 
-          shift: [0.5px,0.5py]
+          shift: [0.4px,-0.7py]
+      holeCenter:
+        what: mountinghole
+        where: matrix_inner_bottom
+        adjust: 
+          shift: [-0.6px,-0.45py]
       holeTopRight:
         what: mountinghole
         where: matrix_index_top
         adjust: 
-          shift: [-0.5px,-0.3py]
+          shift: [-0.615px,-0.2py]
       holeBottomRight:
         what: mountinghole
-        where: thumbs_inner_cluster
+        where: thumbs_outer_cluster
         adjust: 
-          shift: [0.5px,0]
+          shift: [0.6px,0py]
   platepcb:
     outlines:
       main:
@@ -537,22 +565,27 @@ pcbs:
         what: mountinghole
         where: matrix_pinky_top
         adjust: 
-          shift: [0.5px,-0.5py]
+          shift: [0.5875px,-0.25py]
       holeBottomLeft:
         what: mountinghole
         where: matrix_pinky_bottom
         adjust: 
-          shift: [0.5px,0.5py]
+          shift: [0.4px,-0.7py]
+      holeCenter:
+        what: mountinghole
+        where: matrix_inner_bottom
+        adjust: 
+          shift: [-0.6px,-0.45py]
       holeTopRight:
         what: mountinghole
         where: matrix_index_top
         adjust: 
-          shift: [-0.5px,-0.3py]
+          shift: [-0.615px,-0.2py]
       holeBottomRight:
         what: mountinghole
-        where: thumbs_inner_cluster
+        where: thumbs_outer_cluster
         adjust: 
-          shift: [0.5px,0]
+          shift: [0.6px,0py]
 cases:
   _bottom:
     - name: _case_pcb
