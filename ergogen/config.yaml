@@ -123,6 +123,20 @@ outlines:
       where: true
       bound: false
       size: [choc, choc]
+  cutout_circle_thumb:
+    - what: circle
+      radius: 200
+      where:
+        ref: thumbs_inner_cluster
+        shift: [-16, -211]
+  cutout_circle_right:
+    - what: circle
+      radius: 200
+      where:
+        ref: matrix_inner_bottom
+        shift: [231, 27]
+
+
   cutout_circle_small:
     - what: circle
       radius: 150
@@ -147,6 +161,8 @@ outlines:
       where:
         ref: matrix_middle_bottom
         shift: [-13,-188]
+
+
   cutout_circle_large:
     - what: circle
       radius: 300
@@ -161,18 +177,18 @@ outlines:
           shift: [-0.5px, 0.5py]
         - ref: matrix_pinky_bottom
           shift: [-0.5px, -0.5py]
+        - ref: thumbs_inner_cluster
+          shift: [-0.5px, -0.75py]
         - ref: thumbs_outer_cluster
-          shift: [-0.625px, 0.5py]
+          shift: [-0.52px, -0.5py]
         - ref: thumbs_outer_cluster
-          shift: [-0.625px, -0.5py]
+          shift: [0.5px, -0.5py]
         - ref: thumbs_outer_cluster
-          shift: [0.625px, -0.5py]
-        - ref: thumbs_outer_cluster
-          shift: [0.625px, -0.15py]
+          shift: [2px, 0.35py]
 
         - ref: matrix_inner_top
           affect: r
-        - shift: [0,2.36py]
+        - shift: [-0.2px, 0.84py]
 
         - ref: matrix_inner_top
           shift: [0.5px, -0.5py]
@@ -358,6 +374,8 @@ outlines:
         shift: [-0.5px,-0.3py]
   pcb: [
           +board,
+          -cutout_circle_thumb,
+          -cutout_circle_right
           #-cutout_circle_small
   ]
   _case_pcb: [
@@ -371,7 +389,9 @@ outlines:
 
   plate: [
           +board,
-          -cutout_circle_small,
+          -cutout_circle_thumb,
+          -cutout_circle_right,
+          #-cutout_circle_small,
           -_mcucutout,
           -switches
   ]
