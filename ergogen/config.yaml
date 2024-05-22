@@ -481,6 +481,8 @@ pcbs:
       choc_hotswap:
         what: choc
         where: true
+        adjust:
+          rotate: 180
         params:
           keycaps: true
           reverse: true
@@ -490,8 +492,8 @@ pcbs:
       choc:
         what: choc
         where: true
-        adjust:
-          rotate: 180
+        #adjust:
+        #  rotate: 180
         params:
             keycaps: true
             reverse: true
