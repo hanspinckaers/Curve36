@@ -38,7 +38,7 @@ points:
                 column_net: P14
         ring:
           key:
-            stagger: 17
+            stagger: 14
             splay: -10
             origin: [0, -ky]
           rows:
@@ -50,8 +50,8 @@ points:
                 column_net: P9
         middle:
           key:
-            stagger: 17/3
-            splay: -5
+            stagger: 4
+            splay: -3.5
             origin: [0, -ky]
           rows:
             bottom:
@@ -62,8 +62,8 @@ points:
                 column_net: P6
         index:
           key:
-            stagger: -17/3
-            splay: -5
+            stagger: -15
+            splay: -8
             origin: [0, -ky]
           rows:
             bottom:
@@ -74,7 +74,7 @@ points:
                 column_net: P3
         inner:
           key:
-            stagger: -17/6
+            stagger: -3
           rows:
             bottom:
                 column_net: P2
@@ -91,18 +91,25 @@ points:
         padding: 1ky
         spread: 1kx
       anchor:
-        ref: matrix_inner_bottom
-        shift: [0,-24]
+        ref: matrix_index_bottom
+        shift: [kx/4,-25]
       columns:
         inner:
           key:
-            splay: -15
+            splay: -5
+            shift: [-2,2]
             column_net: P19
+        center:
+          key:
+            splay: -8
+            column_net: P20
         outer:
           key:
-            splay: -10
+            width: 1.25kx
+            splay: -13
             origin: [-9, -9.5]
-            column_net: P20
+            rotate: 90
+            column_net: P21
       rows:
         cluster:
 outlines:
@@ -155,26 +162,29 @@ outlines:
         - ref: matrix_pinky_bottom
           shift: [-0.5px, -0.5py]
         - ref: thumbs_outer_cluster
-          shift: [0.5px, -0.5py]
+          shift: [-0.625px, 0.5py]
         - ref: thumbs_outer_cluster
-          shift: [0.5px, 0.5py]
+          shift: [-0.625px, -0.5py]
+        - ref: thumbs_outer_cluster
+          shift: [0.625px, -0.5py]
+        - ref: thumbs_outer_cluster
+          shift: [0.625px, -0.15py]
 
-        -
-          - ref: matrix_inner_top
-            affect: r
-          - shift: [0,2.675py]
+        - ref: matrix_inner_top
+          affect: r
+        - shift: [0,2.36py]
 
         - ref: matrix_inner_top
           shift: [0.5px, -0.5py]
         - ref: matrix_inner_top
           shift: [0.5px, 0.5py]
         - ref: matrix_inner_top
-          shift: [-0.5px+pd, 0.5py]
+          shift: [-0.395px, 0.5py]
 
         - ref: matrix_index_top
           shift: [0.5px, 0.5py] 
         - ref: matrix_index_top
-          shift: [-0.66px, 0.5py] 
+          shift: [-0.83px, 0.5py] 
 
         - ref: matrix_middle_top
           shift: [0.5px, 0.5py]
@@ -182,12 +192,12 @@ outlines:
           shift: [-0.5px, 0.5py]
 
         - ref: matrix_ring_top
-          shift: [0.64px, 0.5py]
+          shift: [0.57px, 0.5py]
         - ref: matrix_ring_top
           shift: [-0.5px, 0.5py]
         
         - ref: matrix_pinky_top
-          shift: [0.77px, 0.5py]
+          shift: [0.8px, 0.5py]
       fillet: 1
   _case_board:
     - what: polygon
@@ -348,7 +358,7 @@ outlines:
         shift: [-0.5px,-0.3py]
   pcb: [
           +board,
-          -cutout_circle_small
+          #-cutout_circle_small
   ]
   _case_pcb: [
           +_case_board,
