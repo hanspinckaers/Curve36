@@ -131,10 +131,10 @@ outlines:
         shift: [-16, -211]
   cutout_circle_right:
     - what: circle
-      radius: 200
+      radius: 250
       where:
         ref: matrix_inner_bottom
-        shift: [231, 27]
+        shift: [281, 27]
 
 
   cutout_circle_small:
@@ -182,7 +182,7 @@ outlines:
         - ref: thumbs_outer_cluster
           shift: [-0.52px, -0.5py]
         - ref: thumbs_outer_cluster
-          shift: [0.5px, -0.5py]
+          shift: [0.5px, -0.51py]
         - ref: thumbs_outer_cluster
           shift: [2px, 0.35py]
 
