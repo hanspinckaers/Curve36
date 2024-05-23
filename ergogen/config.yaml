@@ -506,7 +506,7 @@ pcbs:
         #  rotate: 180
         params:
             keycaps: true
-            reverse: true
+            reverse: false
             from: "{{column_net}}"
             to: GND
       mcu:
