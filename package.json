@@ -1,6 +1,7 @@
 {
   "dependencies": {
-    "ergogen": "^4.1.0"
+    "ergogen": "^4.1.0",
+    "@jscad/cli": "1.10.0"
   },
   "scripts": {
     "build": "npx ergogen ergogen/ && for i in output/cases/*.jscad; do npx @jscad/cli@1 \"$i\" -of stla ; done"
