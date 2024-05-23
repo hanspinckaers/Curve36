@@ -434,43 +434,53 @@ outlines:
       radius: screwsize
       where: matrix_pinky_top
       adjust: 
-        shift: [0.5px,-0.5py]
+        shift: [0.62px,0.15py]
     - what: circle
       radius: screwsize
       where: matrix_pinky_bottom
       adjust: 
-        shift: [0.5px,0.5py]
+        shift: [0.4px,-0.65py]
+    - what: circle
+      radius: screwsize
+      where: matrix_inner_bottom
+      adjust: 
+        shift: [-0.6px,-0.45py]
     - what: circle
       radius: screwsize
       where: matrix_index_top
       adjust: 
-        shift: [-0.5px,-0.3py]
+        shift: [-0.635px,0.15py]
     - what: circle
       radius: screwsize
-      where: thumbs_inner_cluster
+      where: thumbs_outer_cluster
       adjust: 
-        shift: [0.5px,0]
-  standoff:
+        shift: [0.6px,0py]
+  standoff:  
     - what: circle
-      radius: standoffsize
+      radius: screwsize
       where: matrix_pinky_top
       adjust: 
-        shift: [0.5px,-0.5py]
+        shift: [0.62px,0.15py]
     - what: circle
       radius: standoffsize
       where: matrix_pinky_bottom
       adjust: 
-        shift: [0.5px,0.5py]
+        shift: [0.4px,-0.65py]
+    - what: circle
+      radius: standoffsize
+      where: matrix_inner_bottom
+      adjust: 
+        shift: [-0.6px,-0.45py]
     - what: circle
       radius: standoffsize
       where: matrix_index_top
       adjust: 
-        shift: [-0.5px,-0.3py]
+        shift: [-0.635px,0.15py]
     - what: circle
       radius: standoffsize
-      where: thumbs_inner_cluster
+      where: thumbs_outer_cluster
       adjust: 
-        shift: [0.5px,0]
+        shift: [0.6px,0py]
 
 pcbs:
   lambbt:
@@ -536,12 +546,12 @@ pcbs:
         what: mountinghole
         where: matrix_pinky_top
         adjust: 
-          shift: [0.5875px,-0.25py]
+          shift: [0.62px,0.15py]
       holeBottomLeft:
         what: mountinghole
         where: matrix_pinky_bottom
         adjust: 
-          shift: [0.4px,-0.7py]
+          shift: [0.4px,-0.65py]
       holeCenter:
         what: mountinghole
         where: matrix_inner_bottom
@@ -551,7 +561,7 @@ pcbs:
         what: mountinghole
         where: matrix_index_top
         adjust: 
-          shift: [-0.615px,-0.2py]
+          shift: [-0.635px,0.15py]
       holeBottomRight:
         what: mountinghole
         where: thumbs_outer_cluster
@@ -567,12 +577,12 @@ pcbs:
         what: mountinghole
         where: matrix_pinky_top
         adjust: 
-          shift: [0.5875px,-0.25py]
+          shift: [0.62px,0.15py]
       holeBottomLeft:
         what: mountinghole
         where: matrix_pinky_bottom
         adjust: 
-          shift: [0.4px,-0.7py]
+          shift: [0.4px,-0.65py]
       holeCenter:
         what: mountinghole
         where: matrix_inner_bottom
@@ -582,7 +592,7 @@ pcbs:
         what: mountinghole
         where: matrix_index_top
         adjust: 
-          shift: [-0.615px,-0.2py]
+          shift: [-0.635px,0.15py]
       holeBottomRight:
         what: mountinghole
         where: thumbs_outer_cluster
