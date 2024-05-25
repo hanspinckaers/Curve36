@@ -123,52 +123,57 @@ outlines:
       where: true
       bound: false
       size: [choc, choc]
+
   cutout_circle_thumb:
     - what: circle
       radius: 200
       where:
         ref: thumbs_inner_cluster
         shift: [-16, -211]
+  cutout_circle_thumb_wall:
+    - what: circle
+      radius: 200-wpd
+      where:
+        ref: thumbs_inner_cluster
+        shift: [-16, -211]
+  cutout_circle_thumb_inner_wall:
+    - what: circle
+      radius: 200-short_wpd
+      where:
+        ref: thumbs_inner_cluster
+        shift: [-16, -211]
+  cutout_circle_thumb_inner_inner_wall:
+    - what: circle
+      radius: 200-inner_wpd
+      where:
+        ref: thumbs_inner_cluster
+        shift: [-16, -211]
+
   cutout_circle_right:
     - what: circle
       radius: 250
       where:
         ref: matrix_inner_bottom
         shift: [281, 27]
+  cutout_circle_right_wall:
+    - what: circle
+      radius: 250-wpd
+      where:
+        ref: matrix_inner_bottom
+        shift: [281, 27]
+  cutout_circle_right_inner_wall:
+    - what: circle
+      radius: 250-short_wpd
+      where:
+        ref: matrix_inner_bottom
+        shift: [281, 27]
+  cutout_circle_right_inner_inner_wall:
+    - what: circle
+      radius: 250-inner_wpd
+      where:
+        ref: matrix_inner_bottom
+        shift: [281, 27]
 
-
-  cutout_circle_small:
-    - what: circle
-      radius: 150
-      where:
-        ref: matrix_middle_bottom
-        shift: [-13,-188]
-  cutout_circle_small_wall:
-    - what: circle
-      radius: 150-wpd
-      where:
-        ref: matrix_middle_bottom
-        shift: [-13,-188]
-  cutout_circle_small_inner_wall:
-    - what: circle
-      radius: 150-short_wpd
-      where:
-        ref: matrix_middle_bottom
-        shift: [-13,-188]
-  cutout_circle_small_inner_inner_wall:
-    - what: circle
-      radius: 150-inner_wpd
-      where:
-        ref: matrix_middle_bottom
-        shift: [-13,-188]
-
-
-  cutout_circle_large:
-    - what: circle
-      radius: 300
-      where:
-        ref: matrix_middle_bottom
-        shift: [-38,-340]
   board:
     - what: polygon
       operation: stack
@@ -224,27 +229,30 @@ outlines:
           shift: [-0.5px-short_wpd, 0.5py+short_wpd]
         - ref: matrix_pinky_bottom
           shift: [-0.5px-short_wpd, -0.5py-short_wpd]
+        - ref: thumbs_inner_cluster
+          shift: [-0.5px-short_wpd, -0.75py-short_wpd]
         - ref: thumbs_outer_cluster
-          shift: [0.5px+short_wpd, -0.5py-short_wpd]
+          shift: [-0.52px-short_wpd, -0.5py-short_wpd]
         - ref: thumbs_outer_cluster
-          shift: [0.5px+short_wpd, 0.5py+short_wpd]
+          shift: [0.5px+short_wpd, -0.51py-short_wpd]
+        - ref: thumbs_outer_cluster
+          shift: [2px+short_wpd, 0.35py+short_wpd]
 
-        -
-          - ref: matrix_inner_top
-            affect: r
-          - shift: [0,2.675py+short_wpd/2]
+        - ref: matrix_inner_top
+          affect: r
+        - shift: [0, 0.82py]
 
         - ref: matrix_inner_top
           shift: [0.5px+short_wpd, -0.5py+short_wpd]
         - ref: matrix_inner_top
           shift: [0.5px+short_wpd, 0.5py+short_wpd]
         - ref: matrix_inner_top
-          shift: [-0.5px+pd+short_wpd, 0.5py+short_wpd]
+          shift: [-0.395px+short_wpd, 0.5py+short_wpd]
 
         - ref: matrix_index_top
           shift: [0.5px+short_wpd, 0.5py+short_wpd] 
         - ref: matrix_index_top
-          shift: [-0.66px+short_wpd, 0.5py+short_wpd] 
+          shift: [-0.83px+short_wpd, 0.5py+short_wpd] 
 
         - ref: matrix_middle_top
           shift: [0.5px+short_wpd, 0.5py+short_wpd]
@@ -252,12 +260,12 @@ outlines:
           shift: [-0.5px-short_wpd, 0.5py+short_wpd]
 
         - ref: matrix_ring_top
-          shift: [0.64px-short_wpd, 0.5py+short_wpd]
+          shift: [0.57px-short_wpd, 0.5py+short_wpd]
         - ref: matrix_ring_top
           shift: [-0.5px-short_wpd, 0.5py+short_wpd]
         
         - ref: matrix_pinky_top
-          shift: [0.77px-short_wpd, 0.5py+short_wpd]
+          shift: [0.8px-short_wpd, 0.5py+short_wpd]
       fillet: 1
   _case_inner_board:
     - what: polygon
@@ -267,27 +275,30 @@ outlines:
           shift: [-0.5px-inner_wpd, 0.5py+inner_wpd]
         - ref: matrix_pinky_bottom
           shift: [-0.5px-inner_wpd, -0.5py-inner_wpd]
+        - ref: thumbs_inner_cluster
+          shift: [-0.5px-inner_wpd, -0.75py-inner_wpd]
         - ref: thumbs_outer_cluster
-          shift: [0.5px+inner_wpd, -0.5py-inner_wpd]
+          shift: [-0.52px-inner_wpd, -0.5py-inner_wpd]
         - ref: thumbs_outer_cluster
-          shift: [0.5px+inner_wpd, 0.5py+inner_wpd+0.5]
+          shift: [0.5px+inner_wpd, -0.51py-inner_wpd]
+        - ref: thumbs_outer_cluster
+          shift: [2px+inner_wpd, 0.35py+inner_wpd]
 
-        -
-          - ref: matrix_inner_top
-            affect: r
-          - shift: [0,2.675py+inner_wpd/2-0.5]
+        - ref: matrix_inner_top
+          affect: r
+        - shift: [0, 0.83py]
 
         - ref: matrix_inner_top
           shift: [0.5px+inner_wpd, -0.5py+inner_wpd]
         - ref: matrix_inner_top
           shift: [0.5px+inner_wpd, 0.5py+inner_wpd]
         - ref: matrix_inner_top
-          shift: [-0.5px+pd+inner_wpd, 0.5py+inner_wpd]
+          shift: [-0.395px+inner_wpd, 0.5py+inner_wpd]
 
         - ref: matrix_index_top
           shift: [0.5px+inner_wpd, 0.5py+inner_wpd] 
         - ref: matrix_index_top
-          shift: [-0.66px+inner_wpd, 0.5py+inner_wpd] 
+          shift: [-0.83px+inner_wpd, 0.5py+inner_wpd] 
 
         - ref: matrix_middle_top
           shift: [0.5px+inner_wpd, 0.5py+inner_wpd]
@@ -295,12 +306,12 @@ outlines:
           shift: [-0.5px-inner_wpd, 0.5py+inner_wpd]
 
         - ref: matrix_ring_top
-          shift: [0.64px-inner_wpd, 0.5py+inner_wpd]
+          shift: [0.57px-inner_wpd, 0.5py+inner_wpd]
         - ref: matrix_ring_top
           shift: [-0.5px-inner_wpd, 0.5py+inner_wpd]
         
         - ref: matrix_pinky_top
-          shift: [0.77px-inner_wpd, 0.5py+inner_wpd]
+          shift: [0.8px-inner_wpd, 0.5py+inner_wpd]
       fillet: 1
   _case_xlboard:
     - what: polygon
@@ -310,27 +321,30 @@ outlines:
           shift: [-0.5px-wpd, 0.5py+wpd]
         - ref: matrix_pinky_bottom
           shift: [-0.5px-wpd, -0.5py-wpd]
+        - ref: thumbs_inner_cluster
+          shift: [-0.5px-wpd, -0.75py-wpd]
         - ref: thumbs_outer_cluster
-          shift: [0.5px+wpd, -0.5py-wpd]
+          shift: [-0.52px-wpd, -0.5py-wpd]
         - ref: thumbs_outer_cluster
-          shift: [0.5px+wpd, 0.5py+short_wpd]
+          shift: [0.5px+wpd, -0.51py-wpd]
+        - ref: thumbs_outer_cluster
+          shift: [2px+wpd, 0.35py+wpd]
 
-        -
-          - ref: matrix_inner_top
-            affect: r
-          - shift: [0,2.675py+wpd+0.5]
+        - ref: matrix_inner_top
+          affect: r
+        - shift: [0, 0.78py]
 
         - ref: matrix_inner_top
           shift: [0.5px+wpd, -0.5py+wpd]
         - ref: matrix_inner_top
           shift: [0.5px+wpd, 0.5py+wpd]
         - ref: matrix_inner_top
-          shift: [-0.5px+pd+wpd, 0.5py+wpd]
+          shift: [-0.395px+wpd, 0.5py+wpd]
 
         - ref: matrix_index_top
           shift: [0.5px+wpd, 0.5py+wpd] 
         - ref: matrix_index_top
-          shift: [-0.66px+wpd, 0.5py+wpd] 
+          shift: [-0.83px+wpd, 0.5py+wpd] 
 
         - ref: matrix_middle_top
           shift: [0.5px+wpd, 0.5py+wpd]
@@ -338,12 +352,12 @@ outlines:
           shift: [-0.5px-wpd, 0.5py+wpd]
 
         - ref: matrix_ring_top
-          shift: [0.64px-wpd, 0.5py+wpd]
+          shift: [0.57px-wpd, 0.5py+wpd]
         - ref: matrix_ring_top
           shift: [-0.5px-wpd, 0.5py+wpd]
         
         - ref: matrix_pinky_top
-          shift: [0.77px-wpd, 0.5py+wpd]
+          shift: [0.8px-wpd, 0.5py+wpd]
       fillet: 1
 
   _mcucutout: 
@@ -398,22 +412,22 @@ outlines:
           +board,
           -cutout_circle_thumb,
           -cutout_circle_right
-          #-cutout_circle_small
   ]
   _case_pcb: [
           +_case_board,
-          -cutout_circle_small_inner_wall
+          -cutout_circle_right_inner_wall,
+          -cutout_circle_thumb_inner_wall
   ]
   _case_inner_pcb: [
           +_case_inner_board,
-          -cutout_circle_small_inner_inner_wall
+          -cutout_circle_right_inner_inner_wall,
+          -cutout_circle_thumb_inner_inner_wall
   ]
 
   plate: [
           +board,
           -cutout_circle_thumb,
           -cutout_circle_right,
-          #-cutout_circle_small,
           -_mcucutout,
           -_mcucutout_edge,
           -switches
@@ -421,7 +435,8 @@ outlines:
 
   _case_xlplate: [
           +_case_xlboard,
-          -cutout_circle_small_wall
+          -cutout_circle_right_wall,
+          -cutout_circle_thumb_wall
   ]
 
   _ring_cutout: [
@@ -457,7 +472,7 @@ outlines:
         shift: [0.6px,0py]
   standoff:  
     - what: circle
-      radius: screwsize
+      radius: standoffsize
       where: matrix_pinky_top
       adjust: 
         shift: [0.62px,0.15py]
@@ -664,7 +679,7 @@ cases:
     - what: case
       name: _usbcutout_case
       operation: subtract
-  case_magnetic:
+  _case_magnetic:
     - what: case
       name: _standoffs
       operation: add
