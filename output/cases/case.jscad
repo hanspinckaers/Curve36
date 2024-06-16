@@ -58,6 +58,38 @@ function _usbcutout_extrude_12_outline_fn(){
 }
 
 
+function feetholes_extrude_0_8_outline_fn(){
+    return new CSG.Path2D.arc({"center":[248.0234325,-176.2769061],"radius":4.1,"startangle":250.1803838,"endangle":584.8196165}).appendArc([246.6332863,-180.1340416],{"radius":4.1,"clockwise":false,"large":true}).close().innerToCAG()
+.union(
+    new CSG.Path2D.arc({"center":[187.3052434,-87.6257688],"radius":4.1,"startangle":194.1803821,"endangle":528.8196164}).appendArc([183.3301734,-88.6301681],{"radius":4.1,"clockwise":false,"large":true}).close().innerToCAG()
+).union(
+    new CSG.Path2D.arc({"center":[136.559992,-115.2960207],"radius":4.1,"startangle":27.680383,"endangle":362.3196174}).appendArc([140.1907582,-113.3914113],{"radius":4.1,"clockwise":false,"large":true}).close().innerToCAG()
+).union(
+    new CSG.Path2D.arc({"center":[145.8774776,-150.0693504],"radius":4.1,"startangle":297.680383,"endangle":632.3196174}).appendArc([147.782087,-153.7001166],{"radius":4.1,"clockwise":false,"large":true}).close().innerToCAG()
+).union(
+    new CSG.Path2D.arc({"center":[192.2015951,-166.5962965],"radius":4.1,"startangle":1.1803807,"endangle":335.8196194}).appendArc([196.300725,-166.5118362],{"radius":4.1,"clockwise":false,"large":true}).close().innerToCAG()
+).union(
+    new CSG.Path2D.arc({"center":[250.5917855,-129.2889944],"radius":4.1,"startangle":186.1803805,"endangle":520.8196198}).appendArc([246.5156152,-129.730396],{"radius":4.1,"clockwise":false,"large":true}).close().innerToCAG()
+).union(
+    new CSG.Path2D.arc({"center":[231.8776376,-108.0338616],"radius":4.1,"startangle":186.1803805,"endangle":520.8196198}).appendArc([227.8014673,-108.4752632],{"radius":4.1,"clockwise":false,"large":true}).close().innerToCAG()
+).extrude({ offset: [0, 0, 0.8] });
+}
+
+
+function magnetholes_extrude_1_outline_fn(){
+    return CAG.circle({"center":[238.283711,-174.8147754],"radius":5.1})
+.union(
+    CAG.circle({"center":[192.434793,-155.4183889],"radius":5.1})
+).union(
+    CAG.circle({"center":[219.3635022,-120.6986323],"radius":5.1})
+).union(
+    CAG.circle({"center":[174.6761754,-101.9612716],"radius":5.1})
+).union(
+    CAG.circle({"center":[145.8588953,-134.5451868],"radius":5.1})
+).extrude({ offset: [0, 0, 1] });
+}
+
+
 
 
                 function _standoffs_case_fn() {
@@ -322,6 +354,52 @@ function _usbcutout_extrude_12_outline_fn(){
             
             
 
+                function _feet_holes_case_fn() {
+                    
+
+                // creating part 0 of case _feet_holes
+                let _feet_holes__part_0 = feetholes_extrude_0_8_outline_fn();
+
+                // make sure that rotations are relative
+                let _feet_holes__part_0_bounds = _feet_holes__part_0.getBounds();
+                let _feet_holes__part_0_x = _feet_holes__part_0_bounds[0].x + (_feet_holes__part_0_bounds[1].x - _feet_holes__part_0_bounds[0].x) / 2
+                let _feet_holes__part_0_y = _feet_holes__part_0_bounds[0].y + (_feet_holes__part_0_bounds[1].y - _feet_holes__part_0_bounds[0].y) / 2
+                _feet_holes__part_0 = translate([-_feet_holes__part_0_x, -_feet_holes__part_0_y, 0], _feet_holes__part_0);
+                _feet_holes__part_0 = rotate([0,0,0], _feet_holes__part_0);
+                _feet_holes__part_0 = translate([_feet_holes__part_0_x, _feet_holes__part_0_y, 0], _feet_holes__part_0);
+
+                _feet_holes__part_0 = translate([0,0,0], _feet_holes__part_0);
+                let result = _feet_holes__part_0;
+                
+            
+                    return result;
+                }
+            
+            
+
+                function _magnet_holes_case_fn() {
+                    
+
+                // creating part 0 of case _magnet_holes
+                let _magnet_holes__part_0 = magnetholes_extrude_1_outline_fn();
+
+                // make sure that rotations are relative
+                let _magnet_holes__part_0_bounds = _magnet_holes__part_0.getBounds();
+                let _magnet_holes__part_0_x = _magnet_holes__part_0_bounds[0].x + (_magnet_holes__part_0_bounds[1].x - _magnet_holes__part_0_bounds[0].x) / 2
+                let _magnet_holes__part_0_y = _magnet_holes__part_0_bounds[0].y + (_magnet_holes__part_0_bounds[1].y - _magnet_holes__part_0_bounds[0].y) / 2
+                _magnet_holes__part_0 = translate([-_magnet_holes__part_0_x, -_magnet_holes__part_0_y, 0], _magnet_holes__part_0);
+                _magnet_holes__part_0 = rotate([0,0,0], _magnet_holes__part_0);
+                _magnet_holes__part_0 = translate([_magnet_holes__part_0_x, _magnet_holes__part_0_y, 0], _magnet_holes__part_0);
+
+                _magnet_holes__part_0 = translate([0,0,1], _magnet_holes__part_0);
+                let result = _magnet_holes__part_0;
+                
+            
+                    return result;
+                }
+            
+            
+
                 function case_case_fn() {
                     
 
@@ -418,6 +496,38 @@ function _usbcutout_extrude_12_outline_fn(){
 
                 case__part_5 = translate([0,0,0], case__part_5);
                 result = result.subtract(case__part_5);
+                
+            
+
+                // creating part 6 of case case
+                let case__part_6 = _feet_holes_case_fn();
+
+                // make sure that rotations are relative
+                let case__part_6_bounds = case__part_6.getBounds();
+                let case__part_6_x = case__part_6_bounds[0].x + (case__part_6_bounds[1].x - case__part_6_bounds[0].x) / 2
+                let case__part_6_y = case__part_6_bounds[0].y + (case__part_6_bounds[1].y - case__part_6_bounds[0].y) / 2
+                case__part_6 = translate([-case__part_6_x, -case__part_6_y, 0], case__part_6);
+                case__part_6 = rotate([0,0,0], case__part_6);
+                case__part_6 = translate([case__part_6_x, case__part_6_y, 0], case__part_6);
+
+                case__part_6 = translate([0,0,0], case__part_6);
+                result = result.subtract(case__part_6);
+                
+            
+
+                // creating part 7 of case case
+                let case__part_7 = _magnet_holes_case_fn();
+
+                // make sure that rotations are relative
+                let case__part_7_bounds = case__part_7.getBounds();
+                let case__part_7_x = case__part_7_bounds[0].x + (case__part_7_bounds[1].x - case__part_7_bounds[0].x) / 2
+                let case__part_7_y = case__part_7_bounds[0].y + (case__part_7_bounds[1].y - case__part_7_bounds[0].y) / 2
+                case__part_7 = translate([-case__part_7_x, -case__part_7_y, 0], case__part_7);
+                case__part_7 = rotate([0,0,0], case__part_7);
+                case__part_7 = translate([case__part_7_x, case__part_7_y, 0], case__part_7);
+
+                case__part_7 = translate([0,0,0], case__part_7);
+                result = result.subtract(case__part_7);
                 
             
                     return result;

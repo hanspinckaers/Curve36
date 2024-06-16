@@ -112,6 +112,7 @@ points:
             column_net: P21
       rows:
         cluster:
+
 outlines:
   keys:
     - what: rectangle
@@ -496,6 +497,103 @@ outlines:
       where: thumbs_outer_cluster
       adjust: 
         shift: [0.6px,0py]
+  feetholes:
+    - what: circle
+      radius: 4.1 # some tolerance
+      where: matrix_pinky_top
+      adjust:
+        shift: [-4, 3]
+    - what: circle
+      radius: 4.1
+      where: matrix_pinky_top
+      adjust:
+        shift: [4, 3]
+    - what: circle
+      radius: 4.1
+      where: matrix_pinky_bottom
+      adjust:
+        shift: [-4, 1]
+    - what: circle
+      radius: 4.1
+      where: matrix_pinky_bottom
+      adjust:
+        shift: [-4, -7]
+    - what: circle
+      radius: 4.1
+      where: thumbs_inner_cluster
+      adjust:
+        shift: [-13, -6]
+    - what: circle
+      radius: 4.1
+      where: thumbs_inner_cluster
+      adjust:
+        shift: [-5, -6]
+    - what: circle
+      radius: 4.1
+      where: thumbs_outer_cluster
+      adjust:
+        shift: [4, -3]
+    - what: circle
+      radius: 4.1
+      where: thumbs_outer_cluster
+      adjust:
+        shift: [-4, -3]
+    - what: circle
+      radius: 4.1
+      where: matrix_inner_top
+      adjust:
+        shift: [25, -15]
+    - what: circle
+      radius: 4.1
+      where: matrix_inner_top
+      adjust:
+        shift: [17, -15]
+    - what: circle
+      radius: 4.1
+      where: matrix_inner_top
+      adjust:
+        shift: [4, 4]
+    - what: circle
+      radius: 4.1
+      where: matrix_inner_top
+      adjust:
+        shift: [-4, 4]
+    - what: circle
+      radius: 4.1
+      where: matrix_middle_top
+      adjust:
+        shift: [3, 4]
+    - what: circle
+      radius: 4.1
+      where: matrix_middle_top
+      adjust:
+        shift: [-5, 4]
+  magnetholes:
+    - what: circle
+      radius: 5.1
+      where: matrix_pinky_bottom
+      adjust:
+        shift: [0, 16]
+    - what: circle
+      radius: 5.1
+      where: matrix_middle_top
+      adjust:
+        shift: [-10, -10]
+    - what: circle
+      radius: 5.1
+      where: matrix_inner_top
+      adjust:
+        shift: [-7, -10]
+    - what: circle
+      radius: 5.1
+      where: thumbs_inner_cluster
+      adjust:
+        shift: [-15, 5]
+    - what: circle
+      radius: 5.1
+      where: thumbs_outer_cluster
+      adjust:
+        shift: [0, 6]
 
 pcbs:
   Keiler:
@@ -660,6 +758,13 @@ cases:
     - name: _ring_cutout
       extrude: 0.6
       shift: [0,-1.5py,0.8]
+  _feet_holes:
+    - name: feetholes
+      extrude: 0.8
+  _magnet_holes:
+    - name: magnetholes
+      extrude: 1
+      shift: [0, 0, 1]
   case:
     - what: case
       name: _standoffs
@@ -678,6 +783,12 @@ cases:
       operation: add
     - what: case
       name: _usbcutout_case
+      operation: subtract
+    - what: case
+      name: _feet_holes
+      operation: subtract
+    - what: case
+      name: _magnet_holes
       operation: subtract
   _case_magnetic:
     - what: case
