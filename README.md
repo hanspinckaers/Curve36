@@ -10,4 +10,6 @@ The index finger adjustments try to address the fact that men usually have longe
 Thumb splay is a bit less aggressive than on other keyboards, as I personally noticed my thumbs to prefer slightly more lateral movement.
 I also tried to avoid underreaching, while not moving the outer thumb key too far away.
 
+Firmware available [here](https://github.com/jonathanforking/Keiler-ZMK).
+
 ![left half](/images/left.jpg)
