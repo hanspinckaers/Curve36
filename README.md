@@ -15,10 +15,32 @@ Firmware available [here](https://github.com/jonathanforking/Keiler-ZMK).
 ![left half](/images/left.jpg)
 
 # Bill of Materials
-TODO
+| Part                                                                          | Quantity | Note                                                 |
+|-------------------------------------------------------------------------------|----------|------------------------------------------------------|
+| [PCB](/gerbers/pcb.zip)                                                       | 2        | 1.6mm thickness                                      |
+| [Switchplate](/gerbers/switchplate.zip)                                       | 2        | 1.2mm thickness                                      |
+| nice!nano                                                                     | 2        | Other pro micro boards should also work              |
+| 12 pin header                                                                 | 4        |                                                      |
+| Pin                                                                           | 48       | Mill Max 3320 recommended                            |
+| Seeed XIAO BLE nRF52840                                                       | 1        | Dongle microcontroller                               |
+| [Dongle case](https://www.printables.com/de/model/522586-seeed-xiao-ble-case) | 1        |                                                      |
+| [Left case](/output/cases/case_left.stl)                                      | 1        | PCTG recommended                                     |
+| [Right case](/output/cases/case_right.stl)                                    | 1        | PCTG recommended                                     |
+| M2 x 3mm x 3.5mm brass screw insert                                           | 8        |                                                      |
+| M2 x 5mm x 1mm plastic washer                                                 | 8        |                                                      |
+| M2 x 6mm flat head screw                                                      | 8        |                                                      |
+| 10mm x 1mm round neodym magnet                                                | 10       | N52 recommended                                      |
+| 8mm self-adhesive feet                                                        | 14       | 3M Bumpons SJ 5076 recommended                       |
+| 301230 LiPo battery                                                           | 2        |                                                      |
+| On/Off switch                                                                 | 2        | Needs to be compatible with Alps Alpine SSSS811101   |
+| Reset button                                                                  | 2        | Needs to be compatible with Omron B3U-1000P          |
+| Choc V1 switch                                                                | 36       |                                                      |
+| Choc V1 hotswap socket                                                        | 36       |                                                      |
+| Choc V1 1u keycap                                                             | 34       |                                                      |
+| Choc V1 1.25u keycap                                                          | 2        |                                                      |
 
 # Build instructions
-The following is a small manual on how to assemble the keyboard, if you're looking for a more comprehensive guide with more basic instructions (e.g. a soldering tutorial), you should turn elsewhere. Don't be discouraged though, I just don't think of this build as particullary challenging, which is why I'm trying to keep this section short.
+The following is a small manual on how to assemble the keyboard, if you're looking for a more comprehensive guide with more basic instructions (e.g. a soldering tutorial), you should turn elsewhere. Don't be discouraged though, I just don't think of this build as particullary challenging, which is why I'm trying to keep this section short.  
 One tip I can give regardless, is to just always put some solder on one of the pads upfront whenever you're soldering a component with more than one connection, and then solder that one first by just reheating the pre-applied solder. This lets you focus on properly aligning your component, and provides an 'anchor' for when you do the other pads. 
 
 ![jumpers](/images/jumpers.jpg)
@@ -37,10 +59,14 @@ One tip I can give regardless, is to just always put some solder on one of the p
 
 7. Put the brass screw inserts into the case's mountholes with your soldering iron. You can try to keep them level by letting them stick out a little bit and then quickly pressing them down with a flat object (e.g. tweezers) while they're still warm enough to sink in.
 
-8. Screw the board/switchplate sandwich (separated by washers inbetween) into the case.
+8. Use duct tape to hold your magnets in the case. Make sure that their poles align with their counterparts in the other keyboard half so that they attract to each other.
 
-9. Insert switches.
+9. Screw the board/switchplate sandwich (separated by washers inbetween) into the case.
 
-10. Repeat for the other half
+10. Attach feet to the case so that they are not in the way of each other when putting both halves together.
+
+11. Insert switches.
+
+12. Repeat for the other half.
 
 Finally, build the [firmware](https://github.com/jonathanforking/Keiler-ZMK) and flash the corresponding `.UF2` file to every microcontroller, by connecting it to your PC via USB, double pressing its reset button, and copying it over (you can just pull out the cable afterwards).
