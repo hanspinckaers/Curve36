@@ -40,8 +40,8 @@ Firmware available [here](https://github.com/jonathanforking/Keiler-ZMK).
 | Choc V1 1.25u keycap                                                          | 2        |                                                      |
 
 # Build instructions
-The following is a small manual on how to assemble the keyboard, if you're looking for a more comprehensive guide with more basic instructions (e.g. a soldering tutorial), you should turn elsewhere. Don't be discouraged though, I just don't think of this build as particullary challenging, which is why I'm trying to keep this section short.  
-One tip I can give regardless, is to just always put some solder on one of the pads upfront whenever you're soldering a component with more than one connection, and then solder that one first by just reheating the pre-applied solder. This lets you focus on properly aligning your component, and provides an 'anchor' for when you do the other pads. 
+The following is a small manual on how to assemble the keyboard, if you're looking for an exhaustive guide with more basic instructions (e.g. a soldering tutorial), you should turn elsewhere. Don't be discouraged though, as it is a fairly simple procedure, I'm just trying to keep this section short.  
+One tip I can give, is to always put some solder on one of the pads upfront whenever you're soldering a component with more than one connection, and then solder that one first by just reheating the pre-applied solder. This lets you focus on properly aligning your component, and provides an 'anchor' for when you do the other pads. 
 
 ![jumpers](/images/jumpers.jpg)
 
