@@ -1,9 +1,11 @@
 # About
-
-![both halves](/images/both.jpg)
+![image](https://github.com/user-attachments/assets/4ebb4365-0c4c-410d-bb8d-f49b61fc1d8d)
 
 This is a diodeless, 36 key, split (reversible PCB), wireless keyboard with Choc V1 switches, based off of the [Keiler](https://github.com/jonathanforking/Keiler) 
 
 Everything has splay, including the index finger, which is also shifted downwards to sit between ring and pinky fingers in terms of height.
 
-The index finger adjustments try to address the fact that men usually have longer ring than index fingers, as well as hands typically being slightly tilted while typing (due to the thumb pushing the hand up on flat keyboards), which causes the index to flare inwards.
+Some columns are slightly curved to follow the movement my fingers make while typing.
+
+I'm not super happy with the amount of underreach the innermost thumb key has.
+
