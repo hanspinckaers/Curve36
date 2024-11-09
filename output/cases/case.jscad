@@ -1,159 +1,51 @@
-function standoff_extrude_5_outline_fn(){
-    return CAG.circle({"center":[249.791655,-167.9178758],"radius":2.5})
-.union(
-    CAG.circle({"center":[197.6101202,-102.2676022],"radius":2.5})
-).union(
-    CAG.circle({"center":[160.9238218,-159.8586316],"radius":2.5})
-).union(
-    CAG.circle({"center":[152.4399984,-111.1962772],"radius":2.5})
-).extrude({ offset: [0, 0, 5] });
+function case_board_extrude_1_outline_fn(){
+    return new CSG.Path2D([[157.2503054,-96.1973355],[132.015215,-104.8864739]]).appendArc([131.3952646,-106.1575607],{"radius":1,"clockwise":false,"large":false}).appendPoint([137.2580264,-123.1842574]).appendArc([137.2821004,-123.2651007],{"radius":1,"clockwise":true,"large":false}).appendPoint([141.5725862,-140.2638739]).appendArc([141.5860058,-140.3250584],{"radius":1,"clockwise":true,"large":false}).appendPoint([144.524685,-156.0641402]).appendArc([145.2069971,-156.8343186],{"radius":1,"clockwise":false,"large":false}).appendPoint([180.3084734,-167.9015396]).appendArc([180.5094424,-167.9428352],{"radius":1,"clockwise":false,"large":false}).appendPoint([197.6376297,-169.6596072]).appendArc([197.8799187,-169.714929],{"radius":1,"clockwise":true,"large":false}).appendPoint([216.4443545,-176.4718311]).appendArc([216.6551744,-176.5782363],{"radius":1,"clockwise":true,"large":false}).appendPoint([231.0518516,-186.129633]).appendArc([232.4433622,-185.8409846],{"radius":1,"clockwise":false,"large":false}).appendPoint([243.807163,-168.3422658]).appendArc([244.5386075,-167.8926701],{"radius":1,"clockwise":true,"large":false}).appendPoint([252.3445761,-167.0508133]).appendArc([253.2084359,-166.295309],{"radius":1,"clockwise":false,"large":false}).appendPoint([262.393046,-128.9349809]).appendArc([261.6725263,-127.728151],{"radius":1,"clockwise":false,"large":false}).appendPoint([240.5114059,-122.2511697]).appendArc([239.7644081,-121.2133137],{"radius":1,"clockwise":true,"large":false}).appendPoint([241.1541991,-101.3383748]).appendArc([240.2263915,-100.2710543],{"radius":1,"clockwise":false,"large":false}).appendPoint([224.4317989,-99.1665888]).appendArc([223.5022068,-98.1329368],{"radius":1,"clockwise":true,"large":false}).appendPoint([223.6568247,-93.8512624]).appendArc([222.7272326,-92.8176104],{"radius":1,"clockwise":false,"large":false}).appendPoint([201.2641058,-91.3167622]).appendArc([200.3339911,-90.3352461],{"radius":1,"clockwise":true,"large":false}).appendPoint([200.2798659,-86.962976]).appendArc([199.2974471,-85.9791763],{"radius":1,"clockwise":false,"large":false}).appendPoint([180.2534385,-85.6467619]).appendArc([179.2364824,-86.6151073],{"radius":1,"clockwise":false,"large":false}).appendPoint([179.1630613,-88.944608]).appendArc([178.1286581,-89.9124965],{"radius":1,"clockwise":true,"large":false}).appendPoint([158.9759092,-89.2436678]).appendArc([157.941015,-90.2398119],{"radius":1,"clockwise":false,"large":false}).appendPoint([157.9247319,-95.2550636]).appendArc([157.2503054,-96.1973355],{"radius":1,"clockwise":true,"large":false}).close().innerToCAG()
+.extrude({ offset: [0, 0, 1] });
 }
 
 
-function mounting_extrude_5_outline_fn(){
-    return CAG.circle({"center":[249.791655,-167.9178758],"radius":1.5})
-.union(
-    CAG.circle({"center":[197.6101202,-102.2676022],"radius":1.5})
-).union(
-    CAG.circle({"center":[160.9238218,-159.8586316],"radius":1.5})
-).union(
-    CAG.circle({"center":[152.4399984,-111.1962772],"radius":1.5})
-).extrude({ offset: [0, 0, 5] });
+function case_xlboard_extrude_3_6_outline_fn(){
+    return new CSG.Path2D([[155.4503565,-94.7018663],[129.4730416,-103.6465731]]).appendArc([128.8530912,-104.9176599],{"radius":1,"clockwise":false,"large":false}).appendPoint([136.0167597,-125.7224642]).appendArc([136.0428491,-125.8114358],{"radius":1,"clockwise":true,"large":false}).appendPoint([140.1584591,-142.7126097]).appendArc([140.1716139,-142.7753033],{"radius":1,"clockwise":true,"large":false}).appendPoint([142.7666722,-157.4703767]).appendArc([143.4485556,-158.2495026],{"radius":1,"clockwise":false,"large":false}).appendPoint([180.0619677,-169.8855052]).appendArc([180.268704,-169.9278438],{"radius":1,"clockwise":false,"large":false}).appendPoint([196.9517224,-171.5392657]).appendArc([197.1975994,-171.5949406],{"radius":1,"clockwise":true,"large":false}).appendPoint([215.7654249,-178.3530764]).appendArc([215.9672697,-178.4535962],{"radius":1,"clockwise":true,"large":false}).appendPoint([231.5695103,-188.5653518]).appendArc([232.9520458,-188.270818],{"radius":1,"clockwise":false,"large":false}).appendPoint([244.8935892,-169.8824536]).appendArc([245.6250337,-169.4328579],{"radius":1,"clockwise":true,"large":false}).appendPoint([253.4323507,-168.5908557]).appendArc([254.2957743,-167.8371188],{"radius":1,"clockwise":false,"large":false}).appendPoint([264.2608006,-127.618254]).appendArc([263.5395199,-126.4093477],{"radius":1,"clockwise":false,"large":false}).appendPoint([242.6037193,-121.0182974]).appendArc([241.8555243,-119.9801324],{"radius":1,"clockwise":true,"large":false}).appendPoint([243.2888401,-99.4827597]).appendArc([242.3610325,-98.4154392],{"radius":1,"clockwise":false,"large":false}).appendPoint([226.7354461,-97.3227917]).appendArc([225.8052106,-96.3212316],{"radius":1,"clockwise":true,"large":false}).appendPoint([225.8226157,-91.9656884]).appendArc([224.8923802,-90.9641284],{"radius":1,"clockwise":false,"large":false}).appendPoint([203.2167236,-89.4484187]).appendArc([202.2864841,-88.4480329],{"radius":1,"clockwise":true,"large":false}).appendPoint([202.2961662,-85.0167335]).appendArc([201.3136226,-84.0140641],{"radius":1,"clockwise":false,"large":false}).appendPoint([178.2966689,-83.6123017]).appendArc([177.2794904,-84.5887464],{"radius":1,"clockwise":false,"large":false}).appendPoint([177.2261428,-86.8676432]).appendArc([176.1915172,-87.843631],{"radius":1,"clockwise":true,"large":false}).appendPoint([157.067572,-87.1758081]).appendArc([156.0328095,-88.1917505],{"radius":1,"clockwise":false,"large":false}).appendPoint([156.1246513,-93.7397961]).appendArc([155.4503565,-94.7018663],{"radius":1,"clockwise":true,"large":false}).close().innerToCAG()
+.extrude({ offset: [0, 0, 3.6] });
 }
 
 
-function _case_xlplate_extrude_2_outline_fn(){
-    return new CSG.Path2D([[150.3468803,-102.2843495],[126.9861768,-108.5438311]]).appendArc([126.27907,-109.7685759],{"radius":1,"clockwise":false,"large":false}).appendPoint([140.8794915,-164.2580904]).appendArc([141.6024268,-164.9693001],{"radius":1,"clockwise":false,"large":false}).appendPoint([160.7716942,-169.771169]).appendArc([245.9609785,-195.1666359],{"radius":197.5,"clockwise":true,"large":false}).appendArc([246.9508606,-194.7216242],{"radius":1,"clockwise":false,"large":false}).appendPoint([259.6038944,-175.1843896]).appendArc([258.5826368,-139.6336365],{"radius":247.5,"clockwise":true,"large":false}).appendPoint([258.4664688,-137.3604773]).appendArc([258.4715936,-137.1962365],{"radius":1,"clockwise":true,"large":false}).appendPoint([258.9731096,-132.794487]).appendArc([259.8771323,-122.8848863],{"radius":247.5,"clockwise":true,"large":false}).appendArc([259.1582318,-122.4308682],{"radius":1,"clockwise":false,"large":false}).appendPoint([240.1536675,-120.0585985]).appendArc([239.2833786,-118.958327],{"radius":1,"clockwise":true,"large":false}).appendPoint([241.1212185,-102.0364494]).appendArc([240.2402678,-100.9349051],{"radius":1,"clockwise":false,"large":false}).appendPoint([224.4046925,-99.1306693]).appendArc([223.521104,-98.0570577],{"radius":1,"clockwise":true,"large":false}).appendPoint([223.6065242,-96.9932596]).appendArc([222.7229357,-95.919648],{"radius":1,"clockwise":false,"large":false}).appendPoint([198.0993224,-93.1141417]).appendArc([197.2137029,-92.1690792],{"radius":1,"clockwise":true,"large":false}).appendPoint([196.6400097,-80.3565754]).appendArc([195.61501,-79.4054275],{"radius":1,"clockwise":false,"large":false}).appendPoint([172.5619662,-80.0090928]).appendArc([171.5882334,-80.9953226],{"radius":1,"clockwise":false,"large":false}).appendPoint([171.5505822,-83.7991089]).appendArc([170.6378281,-84.7818761],{"radius":1,"clockwise":true,"large":false}).appendPoint([151.1882145,-86.4834968]).appendArc([150.2771048,-87.5385662],{"radius":1,"clockwise":false,"large":false}).appendPoint([151.0863267,-101.259549]).appendArc([150.3468803,-102.2843495],{"radius":1,"clockwise":true,"large":false}).close().innerToCAG()
+function case_board_extrude_3_6_outline_fn(){
+    return new CSG.Path2D([[157.2503054,-96.1973355],[132.015215,-104.8864739]]).appendArc([131.3952646,-106.1575607],{"radius":1,"clockwise":false,"large":false}).appendPoint([137.2580264,-123.1842574]).appendArc([137.2821004,-123.2651007],{"radius":1,"clockwise":true,"large":false}).appendPoint([141.5725862,-140.2638739]).appendArc([141.5860058,-140.3250584],{"radius":1,"clockwise":true,"large":false}).appendPoint([144.524685,-156.0641402]).appendArc([145.2069971,-156.8343186],{"radius":1,"clockwise":false,"large":false}).appendPoint([180.3084734,-167.9015396]).appendArc([180.5094424,-167.9428352],{"radius":1,"clockwise":false,"large":false}).appendPoint([197.6376297,-169.6596072]).appendArc([197.8799187,-169.714929],{"radius":1,"clockwise":true,"large":false}).appendPoint([216.4443545,-176.4718311]).appendArc([216.6551744,-176.5782363],{"radius":1,"clockwise":true,"large":false}).appendPoint([231.0518516,-186.129633]).appendArc([232.4433622,-185.8409846],{"radius":1,"clockwise":false,"large":false}).appendPoint([243.807163,-168.3422658]).appendArc([244.5386075,-167.8926701],{"radius":1,"clockwise":true,"large":false}).appendPoint([252.3445761,-167.0508133]).appendArc([253.2084359,-166.295309],{"radius":1,"clockwise":false,"large":false}).appendPoint([262.393046,-128.9349809]).appendArc([261.6725263,-127.728151],{"radius":1,"clockwise":false,"large":false}).appendPoint([240.5114059,-122.2511697]).appendArc([239.7644081,-121.2133137],{"radius":1,"clockwise":true,"large":false}).appendPoint([241.1541991,-101.3383748]).appendArc([240.2263915,-100.2710543],{"radius":1,"clockwise":false,"large":false}).appendPoint([224.4317989,-99.1665888]).appendArc([223.5022068,-98.1329368],{"radius":1,"clockwise":true,"large":false}).appendPoint([223.6568247,-93.8512624]).appendArc([222.7272326,-92.8176104],{"radius":1,"clockwise":false,"large":false}).appendPoint([201.2641058,-91.3167622]).appendArc([200.3339911,-90.3352461],{"radius":1,"clockwise":true,"large":false}).appendPoint([200.2798659,-86.962976]).appendArc([199.2974471,-85.9791763],{"radius":1,"clockwise":false,"large":false}).appendPoint([180.2534385,-85.6467619]).appendArc([179.2364824,-86.6151073],{"radius":1,"clockwise":false,"large":false}).appendPoint([179.1630613,-88.944608]).appendArc([178.1286581,-89.9124965],{"radius":1,"clockwise":true,"large":false}).appendPoint([158.9759092,-89.2436678]).appendArc([157.941015,-90.2398119],{"radius":1,"clockwise":false,"large":false}).appendPoint([157.9247319,-95.2550636]).appendArc([157.2503054,-96.1973355],{"radius":1,"clockwise":true,"large":false}).close().innerToCAG()
+.extrude({ offset: [0, 0, 3.6] });
+}
+
+
+function case_board_extrude_2_outline_fn(){
+    return new CSG.Path2D([[157.2503054,-96.1973355],[132.015215,-104.8864739]]).appendArc([131.3952646,-106.1575607],{"radius":1,"clockwise":false,"large":false}).appendPoint([137.2580264,-123.1842574]).appendArc([137.2821004,-123.2651007],{"radius":1,"clockwise":true,"large":false}).appendPoint([141.5725862,-140.2638739]).appendArc([141.5860058,-140.3250584],{"radius":1,"clockwise":true,"large":false}).appendPoint([144.524685,-156.0641402]).appendArc([145.2069971,-156.8343186],{"radius":1,"clockwise":false,"large":false}).appendPoint([180.3084734,-167.9015396]).appendArc([180.5094424,-167.9428352],{"radius":1,"clockwise":false,"large":false}).appendPoint([197.6376297,-169.6596072]).appendArc([197.8799187,-169.714929],{"radius":1,"clockwise":true,"large":false}).appendPoint([216.4443545,-176.4718311]).appendArc([216.6551744,-176.5782363],{"radius":1,"clockwise":true,"large":false}).appendPoint([231.0518516,-186.129633]).appendArc([232.4433622,-185.8409846],{"radius":1,"clockwise":false,"large":false}).appendPoint([243.807163,-168.3422658]).appendArc([244.5386075,-167.8926701],{"radius":1,"clockwise":true,"large":false}).appendPoint([252.3445761,-167.0508133]).appendArc([253.2084359,-166.295309],{"radius":1,"clockwise":false,"large":false}).appendPoint([262.393046,-128.9349809]).appendArc([261.6725263,-127.728151],{"radius":1,"clockwise":false,"large":false}).appendPoint([240.5114059,-122.2511697]).appendArc([239.7644081,-121.2133137],{"radius":1,"clockwise":true,"large":false}).appendPoint([241.1541991,-101.3383748]).appendArc([240.2263915,-100.2710543],{"radius":1,"clockwise":false,"large":false}).appendPoint([224.4317989,-99.1665888]).appendArc([223.5022068,-98.1329368],{"radius":1,"clockwise":true,"large":false}).appendPoint([223.6568247,-93.8512624]).appendArc([222.7272326,-92.8176104],{"radius":1,"clockwise":false,"large":false}).appendPoint([201.2641058,-91.3167622]).appendArc([200.3339911,-90.3352461],{"radius":1,"clockwise":true,"large":false}).appendPoint([200.2798659,-86.962976]).appendArc([199.2974471,-85.9791763],{"radius":1,"clockwise":false,"large":false}).appendPoint([180.2534385,-85.6467619]).appendArc([179.2364824,-86.6151073],{"radius":1,"clockwise":false,"large":false}).appendPoint([179.1630613,-88.944608]).appendArc([178.1286581,-89.9124965],{"radius":1,"clockwise":true,"large":false}).appendPoint([158.9759092,-89.2436678]).appendArc([157.941015,-90.2398119],{"radius":1,"clockwise":false,"large":false}).appendPoint([157.9247319,-95.2550636]).appendArc([157.2503054,-96.1973355],{"radius":1,"clockwise":true,"large":false}).close().innerToCAG()
 .extrude({ offset: [0, 0, 2] });
 }
 
 
-function _case_xlplate_extrude_9_2_outline_fn(){
-    return new CSG.Path2D([[150.3468803,-102.2843495],[126.9861768,-108.5438311]]).appendArc([126.27907,-109.7685759],{"radius":1,"clockwise":false,"large":false}).appendPoint([140.8794915,-164.2580904]).appendArc([141.6024268,-164.9693001],{"radius":1,"clockwise":false,"large":false}).appendPoint([160.7716942,-169.771169]).appendArc([245.9609785,-195.1666359],{"radius":197.5,"clockwise":true,"large":false}).appendArc([246.9508606,-194.7216242],{"radius":1,"clockwise":false,"large":false}).appendPoint([259.6038944,-175.1843896]).appendArc([258.5826368,-139.6336365],{"radius":247.5,"clockwise":true,"large":false}).appendPoint([258.4664688,-137.3604773]).appendArc([258.4715936,-137.1962365],{"radius":1,"clockwise":true,"large":false}).appendPoint([258.9731096,-132.794487]).appendArc([259.8771323,-122.8848863],{"radius":247.5,"clockwise":true,"large":false}).appendArc([259.1582318,-122.4308682],{"radius":1,"clockwise":false,"large":false}).appendPoint([240.1536675,-120.0585985]).appendArc([239.2833786,-118.958327],{"radius":1,"clockwise":true,"large":false}).appendPoint([241.1212185,-102.0364494]).appendArc([240.2402678,-100.9349051],{"radius":1,"clockwise":false,"large":false}).appendPoint([224.4046925,-99.1306693]).appendArc([223.521104,-98.0570577],{"radius":1,"clockwise":true,"large":false}).appendPoint([223.6065242,-96.9932596]).appendArc([222.7229357,-95.919648],{"radius":1,"clockwise":false,"large":false}).appendPoint([198.0993224,-93.1141417]).appendArc([197.2137029,-92.1690792],{"radius":1,"clockwise":true,"large":false}).appendPoint([196.6400097,-80.3565754]).appendArc([195.61501,-79.4054275],{"radius":1,"clockwise":false,"large":false}).appendPoint([172.5619662,-80.0090928]).appendArc([171.5882334,-80.9953226],{"radius":1,"clockwise":false,"large":false}).appendPoint([171.5505822,-83.7991089]).appendArc([170.6378281,-84.7818761],{"radius":1,"clockwise":true,"large":false}).appendPoint([151.1882145,-86.4834968]).appendArc([150.2771048,-87.5385662],{"radius":1,"clockwise":false,"large":false}).appendPoint([151.0863267,-101.259549]).appendArc([150.3468803,-102.2843495],{"radius":1,"clockwise":true,"large":false}).close().innerToCAG()
-.extrude({ offset: [0, 0, 9.2] });
-}
-
-
-function _case_pcb_extrude_9_2_outline_fn(){
-    return new CSG.Path2D([[152.7799903,-103.702952],[129.4356666,-109.9580447]]).appendArc([128.7285598,-111.1827895],{"radius":1,"clockwise":false,"large":false}).appendPoint([142.2958084,-161.8164503]).appendArc([143.007008,-162.5246445],{"radius":1,"clockwise":false,"large":false}).appendPoint([163.6757533,-167.9691116]).appendArc([244.8951393,-192.2766941],{"radius":199.5,"clockwise":true,"large":false}).appendPoint([245.194328,-192.37227]).appendArc([246.3372165,-191.9644601],{"radius":1,"clockwise":false,"large":false}).appendPoint([257.4311571,-174.886959]).appendArc([257.541592,-174.6573998],{"radius":1,"clockwise":false,"large":false}).appendArc([257.7243064,-124.1862924],{"radius":249.5,"clockwise":true,"large":false}).appendPoint([238.0396426,-121.8258766]).appendArc([237.1639927,-120.7302505],{"radius":1,"clockwise":true,"large":false}).appendPoint([238.9134108,-103.7925443]).appendArc([238.0319056,-102.6962335],{"radius":1,"clockwise":false,"large":false}).appendPoint([222.1911424,-100.8914066]).appendArc([221.3075539,-99.817795],{"radius":1,"clockwise":true,"large":false}).appendPoint([221.392974,-98.7539969]).appendArc([220.5093855,-97.6803853],{"radius":1,"clockwise":false,"large":false}).appendPoint([195.9020618,-94.8767349]).appendArc([195.0157043,-93.9128017],{"radius":1,"clockwise":true,"large":false}).appendPoint([194.6751479,-82.4276027]).appendArc([193.6494103,-81.4575841],{"radius":1,"clockwise":false,"large":false}).appendPoint([174.637924,-81.9554174]).appendArc([173.6641673,-82.9666018],{"radius":1,"clockwise":false,"large":false}).appendPoint([173.6944583,-85.5942312]).appendArc([172.7816804,-86.601953],{"radius":1,"clockwise":true,"large":false}).appendPoint([153.3746844,-88.2998451]).appendArc([152.4649681,-89.3750722],{"radius":1,"clockwise":false,"large":false}).appendPoint([153.5180433,-102.6579938]).appendArc([152.7799903,-103.702952],{"radius":1,"clockwise":true,"large":false}).close().innerToCAG()
-.extrude({ offset: [0, 0, 9.2] });
-}
-
-
-function _case_pcb_extrude_5_outline_fn(){
-    return new CSG.Path2D([[152.7799903,-103.702952],[129.4356666,-109.9580447]]).appendArc([128.7285598,-111.1827895],{"radius":1,"clockwise":false,"large":false}).appendPoint([142.2958084,-161.8164503]).appendArc([143.007008,-162.5246445],{"radius":1,"clockwise":false,"large":false}).appendPoint([163.6757533,-167.9691116]).appendArc([244.8951393,-192.2766941],{"radius":199.5,"clockwise":true,"large":false}).appendPoint([245.194328,-192.37227]).appendArc([246.3372165,-191.9644601],{"radius":1,"clockwise":false,"large":false}).appendPoint([257.4311571,-174.886959]).appendArc([257.541592,-174.6573998],{"radius":1,"clockwise":false,"large":false}).appendArc([257.7243064,-124.1862924],{"radius":249.5,"clockwise":true,"large":false}).appendPoint([238.0396426,-121.8258766]).appendArc([237.1639927,-120.7302505],{"radius":1,"clockwise":true,"large":false}).appendPoint([238.9134108,-103.7925443]).appendArc([238.0319056,-102.6962335],{"radius":1,"clockwise":false,"large":false}).appendPoint([222.1911424,-100.8914066]).appendArc([221.3075539,-99.817795],{"radius":1,"clockwise":true,"large":false}).appendPoint([221.392974,-98.7539969]).appendArc([220.5093855,-97.6803853],{"radius":1,"clockwise":false,"large":false}).appendPoint([195.9020618,-94.8767349]).appendArc([195.0157043,-93.9128017],{"radius":1,"clockwise":true,"large":false}).appendPoint([194.6751479,-82.4276027]).appendArc([193.6494103,-81.4575841],{"radius":1,"clockwise":false,"large":false}).appendPoint([174.637924,-81.9554174]).appendArc([173.6641673,-82.9666018],{"radius":1,"clockwise":false,"large":false}).appendPoint([173.6944583,-85.5942312]).appendArc([172.7816804,-86.601953],{"radius":1,"clockwise":true,"large":false}).appendPoint([153.3746844,-88.2998451]).appendArc([152.4649681,-89.3750722],{"radius":1,"clockwise":false,"large":false}).appendPoint([153.5180433,-102.6579938]).appendArc([152.7799903,-103.702952],{"radius":1,"clockwise":true,"large":false}).close().innerToCAG()
-.extrude({ offset: [0, 0, 5] });
-}
-
-
-function _case_inner_pcb_extrude_5_outline_fn(){
-    return new CSG.Path2D([[153.874523,-104.3414213],[130.537937,-110.5944408]]).appendArc([129.8308302,-111.8191856],{"radius":1,"clockwise":false,"large":false}).appendPoint([142.9331168,-160.7175844]).appendArc([143.6392123,-161.4244197],{"radius":1,"clockwise":false,"large":false}).appendPoint([165.0009491,-167.1722599]).appendArc([244.3505038,-190.9509256],{"radius":200.4,"clockwise":true,"large":false}).appendPoint([244.9204965,-191.1317627]).appendArc([246.0610476,-190.7240337],{"radius":1,"clockwise":false,"large":false}).appendPoint([256.2015522,-175.1420318]).appendArc([256.3594251,-174.6857518],{"radius":1,"clockwise":false,"large":false}).appendPoint([256.4958154,-173.1622854]).appendArc([256.7285562,-125.066408],{"radius":250.4,"clockwise":true,"large":false}).appendPoint([237.0389695,-122.6217881]).appendArc([236.1674731,-121.5266688],{"radius":1,"clockwise":true,"large":false}).appendPoint([237.9173133,-104.5848761]).appendArc([237.0358081,-103.4885653],{"radius":1,"clockwise":false,"large":false}).appendPoint([221.1950448,-101.6837383]).appendArc([220.3114563,-100.6101267],{"radius":1,"clockwise":true,"large":false}).appendPoint([220.3968765,-99.5463287]).appendArc([219.513288,-98.4727171],{"radius":1,"clockwise":false,"large":false}).appendPoint([194.9136262,-95.6699397]).appendArc([194.0270471,-94.6972316],{"radius":1,"clockwise":true,"large":false}).appendPoint([193.7904543,-83.3598584]).appendArc([192.7644951,-82.3810649],{"radius":1,"clockwise":false,"large":false}).appendPoint([175.572764,-82.8312463]).appendArc([174.5992105,-83.854124],{"radius":1,"clockwise":false,"large":false}).appendPoint([174.6583804,-86.4016257]).appendArc([173.7458057,-87.4210408],{"radius":1,"clockwise":true,"large":false}).appendPoint([154.3590604,-89.1171613]).appendArc([153.4501335,-90.2017838],{"radius":1,"clockwise":false,"large":false}).appendPoint([154.6117866,-103.2870677]).appendArc([153.874523,-104.3414213],{"radius":1,"clockwise":true,"large":false}).close().innerToCAG()
-.extrude({ offset: [0, 0, 5] });
-}
-
-
-function _usbcutout_extrude_12_outline_fn(){
-    return new CSG.Path2D([[242.9826442,-129.821035],[248.9440753,-130.5002543]]).appendArc([250.0508504,-129.6198857],{"radius":1,"clockwise":false,"large":false}).appendPoint([250.9564761,-121.6713108]).appendArc([250.0761074,-120.5645357],{"radius":1,"clockwise":false,"large":false}).appendPoint([244.1146763,-119.8853165]).appendArc([243.0079012,-120.7656851],{"radius":1,"clockwise":false,"large":false}).appendPoint([242.1022755,-128.71426]).appendArc([242.9826442,-129.8210351],{"radius":1,"clockwise":false,"large":false}).close().innerToCAG()
-.extrude({ offset: [0, 0, 12] });
-}
-
-
-function feetholes_extrude_0_8_outline_fn(){
-    return new CSG.Path2D.arc({"center":[248.0234325,-176.2769061],"radius":4.1,"startangle":250.1803838,"endangle":584.8196165}).appendArc([246.6332863,-180.1340416],{"radius":4.1,"clockwise":false,"large":true}).close().innerToCAG()
-.union(
-    new CSG.Path2D.arc({"center":[187.3052434,-87.6257688],"radius":4.1,"startangle":194.1803821,"endangle":528.8196164}).appendArc([183.3301734,-88.6301681],{"radius":4.1,"clockwise":false,"large":true}).close().innerToCAG()
-).union(
-    new CSG.Path2D.arc({"center":[136.559992,-115.2960207],"radius":4.1,"startangle":27.680383,"endangle":362.3196174}).appendArc([140.1907582,-113.3914113],{"radius":4.1,"clockwise":false,"large":true}).close().innerToCAG()
-).union(
-    new CSG.Path2D.arc({"center":[145.8774776,-150.0693504],"radius":4.1,"startangle":297.680383,"endangle":632.3196174}).appendArc([147.782087,-153.7001166],{"radius":4.1,"clockwise":false,"large":true}).close().innerToCAG()
-).union(
-    new CSG.Path2D.arc({"center":[192.2015951,-166.5962965],"radius":4.1,"startangle":1.1803807,"endangle":335.8196194}).appendArc([196.300725,-166.5118362],{"radius":4.1,"clockwise":false,"large":true}).close().innerToCAG()
-).union(
-    new CSG.Path2D.arc({"center":[250.5917855,-129.2889944],"radius":4.1,"startangle":186.1803805,"endangle":520.8196198}).appendArc([246.5156152,-129.730396],{"radius":4.1,"clockwise":false,"large":true}).close().innerToCAG()
-).union(
-    new CSG.Path2D.arc({"center":[231.8776376,-108.0338616],"radius":4.1,"startangle":186.1803805,"endangle":520.8196198}).appendArc([227.8014673,-108.4752632],{"radius":4.1,"clockwise":false,"large":true}).close().innerToCAG()
-).extrude({ offset: [0, 0, 0.8] });
-}
-
-
-function magnetholes_extrude_1_outline_fn(){
-    return CAG.circle({"center":[238.283711,-174.8147754],"radius":5.1})
-.union(
-    CAG.circle({"center":[192.434793,-155.4183889],"radius":5.1})
-).union(
-    CAG.circle({"center":[219.3635022,-120.6986323],"radius":5.1})
-).union(
-    CAG.circle({"center":[174.6761754,-101.9612716],"radius":5.1})
-).union(
-    CAG.circle({"center":[145.8588953,-134.5451868],"radius":5.1})
-).extrude({ offset: [0, 0, 1] });
+function case_inner_pcb_extrude_2_outline_fn(){
+    return new CSG.Path2D([[157.5339767,-98.5321873],[134.9387145,-106.3123599]]).appendArc([134.3187641,-107.5834467],{"radius":1,"clockwise":false,"large":false}).appendPoint([138.6854577,-120.2652458]).appendArc([138.7071691,-120.3369123],{"radius":1,"clockwise":true,"large":false}).appendPoint([143.198705,-137.4472659]).appendArc([143.2126116,-137.5078521],{"radius":1,"clockwise":true,"large":false}).appendPoint([146.3404915,-153.3828188]).appendArc([147.0100744,-154.1397318],{"radius":1,"clockwise":false,"large":false}).appendPoint([182.8822386,-165.9012243]).appendArc([183.0615134,-165.9422083],{"radius":1,"clockwise":false,"large":false}).appendPoint([200.6025089,-168.2830815]).appendArc([200.8122501,-168.3346014],{"radius":1,"clockwise":true,"large":false}).appendPoint([215.0843522,-173.5292218]).appendArc([215.2692586,-173.6190035],{"radius":1,"clockwise":true,"large":false}).appendPoint([230.3848159,-182.9903244]).appendArc([231.750413,-182.6850525],{"radius":1,"clockwise":false,"large":false}).appendPoint([241.8647745,-167.1103015]).appendArc([242.635954,-166.6572206],{"radius":1,"clockwise":true,"large":false}).appendPoint([247.9245832,-166.2994695]).appendArc([248.8173804,-165.5807591],{"radius":1,"clockwise":false,"large":false}).appendPoint([259.2281976,-129.7490558]).appendArc([258.4671425,-128.4900942],{"radius":1,"clockwise":false,"large":false}).appendPoint([238.1110805,-124.3515212]).appendArc([237.3127497,-123.3018126],{"radius":1,"clockwise":true,"large":false}).appendPoint([238.6993619,-103.4723323]).appendArc([237.7715543,-102.4050118],{"radius":1,"clockwise":false,"large":false}).appendPoint([224.6127162,-101.4848561]).appendArc([223.7641279,-100.8830733],{"radius":1,"clockwise":true,"large":false}).appendPoint([221.4779213,-95.57831]).appendArc([220.629333,-94.9765273],{"radius":1,"clockwise":false,"large":false}).appendPoint([201.2467181,-93.6211627]).appendArc([200.4287631,-93.0839988],{"radius":1,"clockwise":true,"large":false}).appendPoint([198.1989396,-88.7846092]).appendArc([197.3286805,-88.2451617],{"radius":1,"clockwise":false,"large":false}).appendPoint([182.5039599,-87.9863953]).appendArc([181.4873342,-88.9455902],{"radius":1,"clockwise":false,"large":false}).appendPoint([181.3902012,-91.3329455]).appendArc([180.3561284,-92.2916835],{"radius":1,"clockwise":true,"large":false}).appendPoint([160.9210687,-91.6129963]).appendArc([159.9330578,-92.3097674],{"radius":1,"clockwise":false,"large":false}).appendPoint([158.1615199,-97.8892884]).appendArc([157.5339767,-98.5321873],{"radius":1,"clockwise":true,"large":false}).close().innerToCAG()
+.extrude({ offset: [0, 0, 2] });
 }
 
 
 
 
-                function _standoffs_case_fn() {
+                function _bottom_case_fn() {
                     
 
-                // creating part 0 of case _standoffs
-                let _standoffs__part_0 = standoff_extrude_5_outline_fn();
+                // creating part 0 of case _bottom
+                let _bottom__part_0 = case_board_extrude_1_outline_fn();
 
                 // make sure that rotations are relative
-                let _standoffs__part_0_bounds = _standoffs__part_0.getBounds();
-                let _standoffs__part_0_x = _standoffs__part_0_bounds[0].x + (_standoffs__part_0_bounds[1].x - _standoffs__part_0_bounds[0].x) / 2
-                let _standoffs__part_0_y = _standoffs__part_0_bounds[0].y + (_standoffs__part_0_bounds[1].y - _standoffs__part_0_bounds[0].y) / 2
-                _standoffs__part_0 = translate([-_standoffs__part_0_x, -_standoffs__part_0_y, 0], _standoffs__part_0);
-                _standoffs__part_0 = rotate([0,0,0], _standoffs__part_0);
-                _standoffs__part_0 = translate([_standoffs__part_0_x, _standoffs__part_0_y, 0], _standoffs__part_0);
+                let _bottom__part_0_bounds = _bottom__part_0.getBounds();
+                let _bottom__part_0_x = _bottom__part_0_bounds[0].x + (_bottom__part_0_bounds[1].x - _bottom__part_0_bounds[0].x) / 2
+                let _bottom__part_0_y = _bottom__part_0_bounds[0].y + (_bottom__part_0_bounds[1].y - _bottom__part_0_bounds[0].y) / 2
+                _bottom__part_0 = translate([-_bottom__part_0_x, -_bottom__part_0_y, 0], _bottom__part_0);
+                _bottom__part_0 = rotate([0,0,0], _bottom__part_0);
+                _bottom__part_0 = translate([_bottom__part_0_x, _bottom__part_0_y, 0], _bottom__part_0);
 
-                _standoffs__part_0 = translate([0,0,0], _standoffs__part_0);
-                let result = _standoffs__part_0;
-                
-            
-                    return result;
-                }
-            
-            
-
-                function _holes_case_fn() {
-                    
-
-                // creating part 0 of case _holes
-                let _holes__part_0 = mounting_extrude_5_outline_fn();
-
-                // make sure that rotations are relative
-                let _holes__part_0_bounds = _holes__part_0.getBounds();
-                let _holes__part_0_x = _holes__part_0_bounds[0].x + (_holes__part_0_bounds[1].x - _holes__part_0_bounds[0].x) / 2
-                let _holes__part_0_y = _holes__part_0_bounds[0].y + (_holes__part_0_bounds[1].y - _holes__part_0_bounds[0].y) / 2
-                _holes__part_0 = translate([-_holes__part_0_x, -_holes__part_0_y, 0], _holes__part_0);
-                _holes__part_0 = rotate([0,0,0], _holes__part_0);
-                _holes__part_0 = translate([_holes__part_0_x, _holes__part_0_y, 0], _holes__part_0);
-
-                _holes__part_0 = translate([0,0,0], _holes__part_0);
-                let result = _holes__part_0;
-                
-            
-                    return result;
-                }
-            
-            
-
-                function _xlbottom_case_fn() {
-                    
-
-                // creating part 0 of case _xlbottom
-                let _xlbottom__part_0 = _case_xlplate_extrude_2_outline_fn();
-
-                // make sure that rotations are relative
-                let _xlbottom__part_0_bounds = _xlbottom__part_0.getBounds();
-                let _xlbottom__part_0_x = _xlbottom__part_0_bounds[0].x + (_xlbottom__part_0_bounds[1].x - _xlbottom__part_0_bounds[0].x) / 2
-                let _xlbottom__part_0_y = _xlbottom__part_0_bounds[0].y + (_xlbottom__part_0_bounds[1].y - _xlbottom__part_0_bounds[0].y) / 2
-                _xlbottom__part_0 = translate([-_xlbottom__part_0_x, -_xlbottom__part_0_y, 0], _xlbottom__part_0);
-                _xlbottom__part_0 = rotate([0,0,0], _xlbottom__part_0);
-                _xlbottom__part_0 = translate([_xlbottom__part_0_x, _xlbottom__part_0_y, 0], _xlbottom__part_0);
-
-                _xlbottom__part_0 = translate([0,0,0], _xlbottom__part_0);
-                let result = _xlbottom__part_0;
+                _bottom__part_0 = translate([0,0,0], _bottom__part_0);
+                let result = _bottom__part_0;
                 
             
                     return result;
@@ -204,7 +96,7 @@ function magnetholes_extrude_1_outline_fn(){
                     
 
                 // creating part 0 of case _outerWall
-                let _outerWall__part_0 = _case_xlplate_extrude_9_2_outline_fn();
+                let _outerWall__part_0 = case_xlboard_extrude_3_6_outline_fn();
 
                 // make sure that rotations are relative
                 let _outerWall__part_0_bounds = _outerWall__part_0.getBounds();
@@ -227,7 +119,7 @@ function magnetholes_extrude_1_outline_fn(){
                     
 
                 // creating part 0 of case _innerWall
-                let _innerWall__part_0 = _case_pcb_extrude_9_2_outline_fn();
+                let _innerWall__part_0 = case_board_extrude_3_6_outline_fn();
 
                 // make sure that rotations are relative
                 let _innerWall__part_0_bounds = _innerWall__part_0.getBounds();
@@ -289,7 +181,7 @@ function magnetholes_extrude_1_outline_fn(){
                     
 
                 // creating part 0 of case _outerShelf
-                let _outerShelf__part_0 = _case_pcb_extrude_5_outline_fn();
+                let _outerShelf__part_0 = case_board_extrude_2_outline_fn();
 
                 // make sure that rotations are relative
                 let _outerShelf__part_0_bounds = _outerShelf__part_0.getBounds();
@@ -312,7 +204,7 @@ function magnetholes_extrude_1_outline_fn(){
                     
 
                 // creating part 0 of case _innerShelf
-                let _innerShelf__part_0 = _case_inner_pcb_extrude_5_outline_fn();
+                let _innerShelf__part_0 = case_inner_pcb_extrude_2_outline_fn();
 
                 // make sure that rotations are relative
                 let _innerShelf__part_0_bounds = _innerShelf__part_0.getBounds();
@@ -331,80 +223,11 @@ function magnetholes_extrude_1_outline_fn(){
             
             
 
-                function _usbcutout_case_case_fn() {
-                    
-
-                // creating part 0 of case _usbcutout_case
-                let _usbcutout_case__part_0 = _usbcutout_extrude_12_outline_fn();
-
-                // make sure that rotations are relative
-                let _usbcutout_case__part_0_bounds = _usbcutout_case__part_0.getBounds();
-                let _usbcutout_case__part_0_x = _usbcutout_case__part_0_bounds[0].x + (_usbcutout_case__part_0_bounds[1].x - _usbcutout_case__part_0_bounds[0].x) / 2
-                let _usbcutout_case__part_0_y = _usbcutout_case__part_0_bounds[0].y + (_usbcutout_case__part_0_bounds[1].y - _usbcutout_case__part_0_bounds[0].y) / 2
-                _usbcutout_case__part_0 = translate([-_usbcutout_case__part_0_x, -_usbcutout_case__part_0_y, 0], _usbcutout_case__part_0);
-                _usbcutout_case__part_0 = rotate([0,0,0], _usbcutout_case__part_0);
-                _usbcutout_case__part_0 = translate([_usbcutout_case__part_0_x, _usbcutout_case__part_0_y, 0], _usbcutout_case__part_0);
-
-                _usbcutout_case__part_0 = translate([0,0,5], _usbcutout_case__part_0);
-                let result = _usbcutout_case__part_0;
-                
-            
-                    return result;
-                }
-            
-            
-
-                function _feet_holes_case_fn() {
-                    
-
-                // creating part 0 of case _feet_holes
-                let _feet_holes__part_0 = feetholes_extrude_0_8_outline_fn();
-
-                // make sure that rotations are relative
-                let _feet_holes__part_0_bounds = _feet_holes__part_0.getBounds();
-                let _feet_holes__part_0_x = _feet_holes__part_0_bounds[0].x + (_feet_holes__part_0_bounds[1].x - _feet_holes__part_0_bounds[0].x) / 2
-                let _feet_holes__part_0_y = _feet_holes__part_0_bounds[0].y + (_feet_holes__part_0_bounds[1].y - _feet_holes__part_0_bounds[0].y) / 2
-                _feet_holes__part_0 = translate([-_feet_holes__part_0_x, -_feet_holes__part_0_y, 0], _feet_holes__part_0);
-                _feet_holes__part_0 = rotate([0,0,0], _feet_holes__part_0);
-                _feet_holes__part_0 = translate([_feet_holes__part_0_x, _feet_holes__part_0_y, 0], _feet_holes__part_0);
-
-                _feet_holes__part_0 = translate([0,0,0], _feet_holes__part_0);
-                let result = _feet_holes__part_0;
-                
-            
-                    return result;
-                }
-            
-            
-
-                function _magnet_holes_case_fn() {
-                    
-
-                // creating part 0 of case _magnet_holes
-                let _magnet_holes__part_0 = magnetholes_extrude_1_outline_fn();
-
-                // make sure that rotations are relative
-                let _magnet_holes__part_0_bounds = _magnet_holes__part_0.getBounds();
-                let _magnet_holes__part_0_x = _magnet_holes__part_0_bounds[0].x + (_magnet_holes__part_0_bounds[1].x - _magnet_holes__part_0_bounds[0].x) / 2
-                let _magnet_holes__part_0_y = _magnet_holes__part_0_bounds[0].y + (_magnet_holes__part_0_bounds[1].y - _magnet_holes__part_0_bounds[0].y) / 2
-                _magnet_holes__part_0 = translate([-_magnet_holes__part_0_x, -_magnet_holes__part_0_y, 0], _magnet_holes__part_0);
-                _magnet_holes__part_0 = rotate([0,0,0], _magnet_holes__part_0);
-                _magnet_holes__part_0 = translate([_magnet_holes__part_0_x, _magnet_holes__part_0_y, 0], _magnet_holes__part_0);
-
-                _magnet_holes__part_0 = translate([0,0,1], _magnet_holes__part_0);
-                let result = _magnet_holes__part_0;
-                
-            
-                    return result;
-                }
-            
-            
-
                 function case_case_fn() {
                     
 
                 // creating part 0 of case case
-                let case__part_0 = _standoffs_case_fn();
+                let case__part_0 = _bottom_case_fn();
 
                 // make sure that rotations are relative
                 let case__part_0_bounds = case__part_0.getBounds();
@@ -420,7 +243,7 @@ function magnetholes_extrude_1_outline_fn(){
             
 
                 // creating part 1 of case case
-                let case__part_1 = _holes_case_fn();
+                let case__part_1 = _wall_case_fn();
 
                 // make sure that rotations are relative
                 let case__part_1_bounds = case__part_1.getBounds();
@@ -431,12 +254,12 @@ function magnetholes_extrude_1_outline_fn(){
                 case__part_1 = translate([case__part_1_x, case__part_1_y, 0], case__part_1);
 
                 case__part_1 = translate([0,0,0], case__part_1);
-                result = result.subtract(case__part_1);
+                result = result.union(case__part_1);
                 
             
 
                 // creating part 2 of case case
-                let case__part_2 = _xlbottom_case_fn();
+                let case__part_2 = _shelf_case_fn();
 
                 // make sure that rotations are relative
                 let case__part_2_bounds = case__part_2.getBounds();
@@ -448,86 +271,6 @@ function magnetholes_extrude_1_outline_fn(){
 
                 case__part_2 = translate([0,0,0], case__part_2);
                 result = result.union(case__part_2);
-                
-            
-
-                // creating part 3 of case case
-                let case__part_3 = _wall_case_fn();
-
-                // make sure that rotations are relative
-                let case__part_3_bounds = case__part_3.getBounds();
-                let case__part_3_x = case__part_3_bounds[0].x + (case__part_3_bounds[1].x - case__part_3_bounds[0].x) / 2
-                let case__part_3_y = case__part_3_bounds[0].y + (case__part_3_bounds[1].y - case__part_3_bounds[0].y) / 2
-                case__part_3 = translate([-case__part_3_x, -case__part_3_y, 0], case__part_3);
-                case__part_3 = rotate([0,0,0], case__part_3);
-                case__part_3 = translate([case__part_3_x, case__part_3_y, 0], case__part_3);
-
-                case__part_3 = translate([0,0,0], case__part_3);
-                result = result.union(case__part_3);
-                
-            
-
-                // creating part 4 of case case
-                let case__part_4 = _shelf_case_fn();
-
-                // make sure that rotations are relative
-                let case__part_4_bounds = case__part_4.getBounds();
-                let case__part_4_x = case__part_4_bounds[0].x + (case__part_4_bounds[1].x - case__part_4_bounds[0].x) / 2
-                let case__part_4_y = case__part_4_bounds[0].y + (case__part_4_bounds[1].y - case__part_4_bounds[0].y) / 2
-                case__part_4 = translate([-case__part_4_x, -case__part_4_y, 0], case__part_4);
-                case__part_4 = rotate([0,0,0], case__part_4);
-                case__part_4 = translate([case__part_4_x, case__part_4_y, 0], case__part_4);
-
-                case__part_4 = translate([0,0,0], case__part_4);
-                result = result.union(case__part_4);
-                
-            
-
-                // creating part 5 of case case
-                let case__part_5 = _usbcutout_case_case_fn();
-
-                // make sure that rotations are relative
-                let case__part_5_bounds = case__part_5.getBounds();
-                let case__part_5_x = case__part_5_bounds[0].x + (case__part_5_bounds[1].x - case__part_5_bounds[0].x) / 2
-                let case__part_5_y = case__part_5_bounds[0].y + (case__part_5_bounds[1].y - case__part_5_bounds[0].y) / 2
-                case__part_5 = translate([-case__part_5_x, -case__part_5_y, 0], case__part_5);
-                case__part_5 = rotate([0,0,0], case__part_5);
-                case__part_5 = translate([case__part_5_x, case__part_5_y, 0], case__part_5);
-
-                case__part_5 = translate([0,0,0], case__part_5);
-                result = result.subtract(case__part_5);
-                
-            
-
-                // creating part 6 of case case
-                let case__part_6 = _feet_holes_case_fn();
-
-                // make sure that rotations are relative
-                let case__part_6_bounds = case__part_6.getBounds();
-                let case__part_6_x = case__part_6_bounds[0].x + (case__part_6_bounds[1].x - case__part_6_bounds[0].x) / 2
-                let case__part_6_y = case__part_6_bounds[0].y + (case__part_6_bounds[1].y - case__part_6_bounds[0].y) / 2
-                case__part_6 = translate([-case__part_6_x, -case__part_6_y, 0], case__part_6);
-                case__part_6 = rotate([0,0,0], case__part_6);
-                case__part_6 = translate([case__part_6_x, case__part_6_y, 0], case__part_6);
-
-                case__part_6 = translate([0,0,0], case__part_6);
-                result = result.subtract(case__part_6);
-                
-            
-
-                // creating part 7 of case case
-                let case__part_7 = _magnet_holes_case_fn();
-
-                // make sure that rotations are relative
-                let case__part_7_bounds = case__part_7.getBounds();
-                let case__part_7_x = case__part_7_bounds[0].x + (case__part_7_bounds[1].x - case__part_7_bounds[0].x) / 2
-                let case__part_7_y = case__part_7_bounds[0].y + (case__part_7_bounds[1].y - case__part_7_bounds[0].y) / 2
-                case__part_7 = translate([-case__part_7_x, -case__part_7_y, 0], case__part_7);
-                case__part_7 = rotate([0,0,0], case__part_7);
-                case__part_7 = translate([case__part_7_x, case__part_7_y, 0], case__part_7);
-
-                case__part_7 = translate([0,0,0], case__part_7);
-                result = result.subtract(case__part_7);
                 
             
                     return result;
